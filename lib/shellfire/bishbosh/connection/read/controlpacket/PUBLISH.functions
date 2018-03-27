@@ -103,7 +103,7 @@ _bishbosh_connection_read_PUBLISH()
 		remainingTopicLength=$((remainingTopicLength-1))
 	done
 	
-	local topicName="$(<"$temporaryTheirPacketIdentifierFolderPath"/topic-name)"
+	local topicName="$(cat "$temporaryTheirPacketIdentifierFolderPath"/topic-name)"
 	
 	local packetIdentifier
 	local messageLength
